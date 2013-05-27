@@ -22,26 +22,35 @@ public class DrawView extends View implements OnTouchListener {
 	private Paint   mBitmapPaint;
 	private Paint   mPaint;
 	private PathMeasure mPM;
+	MainActivity ma=new MainActivity();
+	int size=MainActivity.get_size();
+	String Pcolor1=MainActivity.get_Pcolor();
+	//String color=MainActivity.color1;
 	float aCoordinates[] = {1f, 1f};
 
 	public DrawView(Context c) {
 	    super(c);
-
+	   // size=size1;
+	   // color=color1;
 	    mPath = new Path();
 	    mPM = new PathMeasure(mPath, false);
 	    mBitmapPaint = new Paint(Paint.DITHER_FLAG);
-
 	    mPaint = new Paint();
 	    mPaint.setAntiAlias(true);
 	    mPaint.setDither(true);
-	    mPaint.setColor(0xFF000000);
+	    System.out.println("Pcolor1"+Pcolor1);
+	    mPaint.setColor(Color.parseColor(Pcolor1));
 	    mPaint.setStyle(Paint.Style.STROKE);
 	    mPaint.setStrokeJoin(Paint.Join.ROUND);
 	    mPaint.setStrokeCap(Paint.Cap.ROUND);
-	    mPaint.setStrokeWidth(3);
+	    mPaint.setStrokeWidth(size);
 	}
+	
 	public DrawView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+		 super(context, attrs);
+		//color=color1;
+		//size=size1;
+      
         // TODO Auto-generated constructor stub
         mPath = new Path();
         mPM = new PathMeasure(mPath, false);
@@ -50,12 +59,14 @@ public class DrawView extends View implements OnTouchListener {
 	    mPaint = new Paint();
 	    mPaint.setAntiAlias(true);
 	    mPaint.setDither(true);
-	    mPaint.setColor(0xFF000000);
 	    mPaint.setStyle(Paint.Style.STROKE);
 	    mPaint.setStrokeJoin(Paint.Join.ROUND);
 	    mPaint.setStrokeCap(Paint.Cap.ROUND);
-	    mPaint.setStrokeWidth(3);
+	    mPaint.setStrokeWidth(size);
+	    System.out.println("Pcolor1"+Pcolor1);
+	  // mPaint.setColor(Color.parseColor(Pcolor1));
     }
+    
 
 	@Override
 	protected void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -91,20 +102,20 @@ public class DrawView extends View implements OnTouchListener {
 	        mY = y;
 	    }
 	    mPM = new PathMeasure(mPath, false);
-	    System.out.println(Float.toString(mPM.getLength()));
+	    //System.out.println(Float.toString(mPM.getLength()));
 	}
 	private void touch_up() {
 	    mPath.lineTo(mX, mY);
 	    // commit the path to our offscreen
 	    mCanvas.drawPath(mPath, mPaint);
 	    mPM = new PathMeasure(mPath, false);
-	    System.out.println(Float.toString(mPM.getLength()));
+	   // System.out.println(Float.toString(mPM.getLength()));
 	    mPM.getPosTan(mPM.getLength() * 0.5f, aCoordinates, null);
 	    // kill this so we don't double draw
 	    mPath.reset();
-	    System.out.println(Float.toString(aCoordinates[0]));
-	    mPaint.setColor(Color.RED);
-	    mCanvas.drawCircle(aCoordinates[0], aCoordinates[1], 5, mPaint);
+	    //System.out.println(Float.toString(aCoordinates[0]));
+	   // mPaint.setColor(Color.RED);
+	   // mCanvas.drawCircle(aCoordinates[0], aCoordinates[1], 5, mPaint);
 	    mPaint.setColor(Color.BLACK);
 	}
 	private void showMidpoint()
@@ -164,6 +175,3 @@ public class DrawView extends View implements OnTouchListener {
 }
 
 
-class Point {
-    float x, y;
-}

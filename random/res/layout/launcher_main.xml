@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backx"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:textColor="#7D2252"
+        android:textSize="40dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stroke Width"
+        android:textColor="#7D2252"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eSize"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="10" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pen Color"
+        android:textColor="#7D2252"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rGC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/rBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="BLACK"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/rBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLUE" />
+
+        <RadioButton
+            android:id="@+id/rOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORANGE" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background Color"
+        android:textColor="#7D2252"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rGB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/bWheat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="WHEAT" />
+
+        <RadioButton
+            android:id="@+id/bWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WHITE" />
+
+        <RadioButton
+            android:id="@+id/bBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BLACK" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+</LinearLayout>
