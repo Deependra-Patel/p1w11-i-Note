@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backx"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP"
+        android:textColor="#7D2252"
+        android:textSize="40dp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp" >
+    </View>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="           As the person writes down word by word by drawing characters on left bottom area, he can see the converted text on screen.
+           He should press the &apos;ENTER&apos; button after every word.&apos;SPEAK&apos; for making your phone speak the words written in text field.&apos;N/Line&apos; for new line.&apos;BKSPC&apos; for deleting a character.&apos;SAVE&apos; for saving your data.
+           "
+        android:textColor="#7D2252"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp" >
+    </View>
+
+    <Button
+        android:id="@+id/bEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BACK" />
+
+</LinearLayout>

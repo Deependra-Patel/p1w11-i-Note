@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backx"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SETTINGS"
+        android:textColor="#7D2252"
+        android:textSize="40dp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp" >
+    </View>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Background Color"
+        android:textColor="#7D2252"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/rGB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/bWheat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="WHEAT" />
+
+        <RadioButton
+            android:id="@+id/bWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WHITE" />
+
+        <RadioButton
+            android:id="@+id/bYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YELLOW" />
+
+        <RadioButton
+            android:id="@+id/bPink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PINK" />
+
+        <RadioButton
+            android:id="@+id/bSlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SLATE" />
+
+        <RadioButton
+            android:id="@+id/bLace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OLD LACE" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="30dp" >
+    </View>
+
+    <Button
+        android:id="@+id/bEnter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+</LinearLayout>
+</ScrollView>
